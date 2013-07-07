@@ -5,8 +5,8 @@ var app = express.createServer(express.logger());
 var buffer = new Buffer('test');
 
 app.get('/', function(request, response) {
-    /var data = buffer.toString();/
-    response.send('helloi');
+    var data = buffer.toString();
+    response.send(data);
 });
 
 var port = process.env.PORT || 5000;
